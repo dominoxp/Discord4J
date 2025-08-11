@@ -759,6 +759,7 @@ public class LocalStoreLayout implements StoreLayout, DataAccessor, GatewayDataU
                     message.update(m -> ImmutableMessageData.builder()
                             .from(m)
                             .channelId(edited.channelId())
+                            .components(edited.components())
                             .guildId(edited.guildId())
                             .content(edited.contentOrElse(m.content()))
                             .timestamp(edited.timestampOrElse(m.timestamp()))

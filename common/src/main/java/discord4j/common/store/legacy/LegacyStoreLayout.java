@@ -1301,6 +1301,7 @@ public class LegacyStoreLayout implements StoreLayout, DataAccessor, GatewayData
 
                 MessageData newMessageData = MessageData.builder()
                     .from(oldMessageData)
+                    .components(messageData.components())
                     .content(messageData.content().toOptional()
                         .orElse(oldMessageData.content()))
                     .embeds(messageData.embeds())
